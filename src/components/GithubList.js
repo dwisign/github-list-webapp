@@ -20,7 +20,11 @@ export default class GithubList extends React.Component {
         {
           this.state.lists
             .map(list =>
-              <li key={list.id} className="list-group-item">{list.full_name}</li>
+              <li key={list.id} className="list-group-item d-flex justify-content-between align-items-center">
+                {list.full_name}
+                <span class="badge bg-success rounded-pill">{list.language}</span>
+              </li>
+          
             )
         }
       </ul>
